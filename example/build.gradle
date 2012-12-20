@@ -12,7 +12,7 @@ repositories {
 
 buildscript {
     repositories {
-        mavenLocal()
+        mavenCentral()
         maven {
             url "https://repository-saucelabs.forge.cloudbees.com/release"
         }
@@ -20,7 +20,7 @@ buildscript {
     dependencies {
         classpath group: 'com.saucelabs', name: 'saucerest', version: '1.0.2'
         classpath group: 'com.saucelabs', name: 'sauce_java_common', version: '1.0.14'
-        classpath group: 'com.saucelabs.gradle', name: 'sauce-gradle-plugin', version: '0.0.1-SNAPSHOT'
+        classpath group: 'com.saucelabs.gradle', name: 'sauce-gradle-plugin', version: '0.0.1'
     }
 }
 
