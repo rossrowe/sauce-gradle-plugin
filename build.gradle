@@ -1,0 +1,17 @@
+import com.saucelabs.gradle.SauceListener
+
+apply plugin: 'java'
+repositories {
+    mavenCentral()
+    maven {
+        url "https://repository-saucelabs.forge.cloudbees.com/release"
+    }
+}
+
+dependencies.testCompile 'junit:junit:4.+'
+dependencies.testCompile 'com.saucelabs:sauce_java_common:1.0.14'
+dependencies.testCompile 'com.saucelabs:saucerest:1.0.2'
+test.stopAtFailuresOrErrors = false
+
+
+gradle.addListener(new SauceListener())
